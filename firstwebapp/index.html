@@ -1,27 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" class="dark"> 
-
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8" />
   <title>My First Web application</title>
-  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="bg-white dark:bg-black">
-  <div class="max-w-[1000px] mx-auto h-[100vh] bg-slate-200 flex flex-col 
-gap-2 p-2">
+  <div class="w-full max-w-[1000px] mx-auto h-[100vh] bg-slate-200 flex flex-col gap-2 p-2">
+
     <div class="p-4 bg-slate-300 flex justify-between">
-      <div>menu</div>
-      <div><button id="btnTheme" class="border border-slate-700 rounded py-1 px-3">Light</button></div>
+      <div>
+        <button class="border border-slate-700 rounded py-1 px-3 lg:hidden" id=btnMenu>Menu</button>
+        <div class="justify-start hidden lg:block bg-slate-300 p-2">
+          <a href="#" class="font-bold hover:underline text-xl mr-2">Home</a>
+          <a href="#" class="font-bold hover:underline text-xl mr-2">Projects</a>
+          <a href="#" class="font-bold hover:underline text-xl mr-2">About</a>
+        </div>
 
+      </div>
+
+      <button id="btnTheme" class="border border-slate-700 rounded py-1 px-3">Light</button>
     </div>
-
     <div class="p-4 grow bg-slate-300">body</div>
     <div class="p-4 text-center bg-slate-300">footer</div>
   </div>
-<script type="module" src="src/main.js"></script>
-
+  <script type="module" src="/src/main.js"></script>
+</body>
 
 
 </html>
