@@ -15,8 +15,8 @@ let department ={
         ]
 };
 
-let obj = JSON.parse(department);
-obj.courses.array.forEach(c => {
+//let obj = JSON.parse(department);
+department.courses.forEach(c => {
     console.log(c.number + ": " + c.name);
 });
 
