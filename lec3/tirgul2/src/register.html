@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Register Page</title>
-    <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" >
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body class="bg-gray-100 flex items-center justify-center h-screen">
@@ -20,12 +21,28 @@
             <input type="password" id="confirmInput" class="w-full p-3 mb-4 border rounded" required />
             <label for="dateInput">Birth Date</label>
             <input type="date" id="dateInput" class="w-full p-3 mb-4 border rounded" required />
+            <div id="arithmetic-captcha-container" class="space-y-2">
+                <label for="captcha-answer" class="block text-sm font-medium text-gray-700"> Solve the CAPTCHA: </label>
+                <div class="flex items-center space-x-4">
+                    <span id="arithmetic-challenge" class="text-lg font-semibold text-gray-800"></span>
+                    <button type="button" id="refresh-arithmetic-captcha" title="Refresh CAPTCHA">
+                        <img class="h-10"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/ReCAPTCHA_icon.svg/150px-ReCAPTCHA_icon.svg.png?20231023175148">
+                    </button>
+                    <input type="text" id="arithmetic-answer" name="arithmetic-answer"
+                        class="appearance-none rounded-md relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
+                        placeholder="Enter the answer">
+                    <p id="arithmetic-error" class="mt-1 text-sm text-red-500 hidden">Incorrect CAPTCHA answer.</p>
+                </div>
+
+            </div>
             <button type="submit" class="w-full p-3 bg-blue-500 text-white rounded hover:bg-blue-600">Register</button>
-            <a href="login.html" class="block text-right mt-4 text-blue-500 hover:underline">already have an account? login</a>
+            <a href="login.html" class="block text-right mt-4 text-blue-500 hover:underline">already have an account?
+                login</a>
         </form>
         <div id="registerMessage" class="mt-2 text-red-500 text-center text-sm"></div>
     </div>
-    <script src="register.js"></script>
+    <script src="captcha.js"></script>
 </body>
 
 </html>
