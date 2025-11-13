@@ -1,32 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Management</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
-<body>
-    <h1>Welcome 
-        <script>
-            let user = JSON.parse(localStorage.getItem('currentUser'))
-            document.write(user.username)
-        </script>
-    </h1>
-    <table>
-        <thead>
-            <th>User Name</th>
-            <th>Mail</th>
-            <th>Date of Birth</th>
+
+<body class="bg-gray-100 flex p-10 justify-center h-screen">
+    <div class="bg-white p-8 rounded shadow-md">
+        <h1 id="userName" class="text-xl font-bold mb-4"></h1>
+    </div>
+    <table id="usersData" class="min-w-full bg-white shadow-md rounded-lg">
+        <thead class="bg-gray-200">
+            <tr></tr>
         </thead>
-        <tbody>
-            <script>
-                let users =  localStorage.getItem('users') ? JSON.parse(localStorage.getItem('users')) : [];
-                for (i = 0; i < users.length; i++) {
-                    document.write("<tr><td>" + users[i].username + "</td><td>" +
-                    users[i].email + "</td><td>" + users[i].dob + "</td></tr>");
-                }
-            </script>
-        </tbody>
+        <tbody></tbody>
     </table>
+
+    <script src="userManagement.js"></script>
 </body>
+
 </html>
